@@ -58,7 +58,7 @@ def remove_extra_files():
     Remove the extra QRCode files that will be created at the temp directory
     '''
     if len(filenames) > 20:
-        for files in filenames[0:10]:
+        for files in filenames[:10]:
             filenames.pop(filenames.index(files))
             os.remove(f"./static/temp/{files}")
 
